@@ -1,0 +1,56 @@
+export const nav_products = "Products"
+export const nav_services = "Services"
+export const nav_gallery = "Gallery"
+export const nav_contact = "Contact"
+
+export const hero_tagline = "Premium Doors for Your Home"
+export const hero_subtitle = "Durable, stylish, and reliable doors with expert installation"
+export const hero_cta = "Inquire Now"
+
+export const products_heading = "Our Products"
+export const products_subheading = "Choose from premium door options"
+
+export const laminated_title = "Laminated Coating Doors"
+export const laminated_desc = "High-quality doors with premium laminated finish"
+export const laminated_feature_1 = "Waterproof & Weather-resistant"
+export const laminated_feature_2 = "Scratch-resistant surface"
+export const laminated_feature_3 = "Stylish & Modern finish"
+export const laminated_feature_4 = "Long-lasting durability"
+export const laminated_feature_5 = "Easy to clean & maintain"
+export const laminated_cta = "Inquire about Laminated Doors"
+
+export const frp_title = "FRP Doors"
+export const frp_desc = "Fiber Reinforced Polymer doors - the modern choice"
+export const frp_feature_1 = "Termite-proof construction"
+export const frp_feature_2 = "Weather-resistant"
+export const frp_feature_3 = "Ultra-strong & durable"
+export const frp_feature_4 = "Low maintenance"
+export const frp_feature_5 = "Eco-friendly material"
+export const frp_cta = "Inquire about FRP Doors"
+
+export const services_heading = "Our Services"
+export const services_subheading = "Beyond products, we deliver experience"
+
+export const delivery_title = "Delivery"
+export const delivery_desc = "Fast and safe delivery to your doorstep with professional handling"
+
+export const installation_title = "Installation"
+export const installation_desc = "Expert installation by trained professionals ensuring perfect fit"
+
+export const gallery_heading = "Gallery"
+export const gallery_subheading = "Our work speaks for itself"
+export const gallery_coming = "Photos coming soon"
+
+export const contact_heading = "Get in Touch"
+export const contact_subheading = "Have a question? We'd love to hear from you"
+export const contact_phone = "Phone"
+export const contact_whatsapp = "WhatsApp"
+export const contact_email = "Email"
+export const contact_cta = "Chat with us"
+
+export const footer_brand = "Kohinoor Doors"
+export const footer_tagline = "Quality doors, quality service"
+export const footer_copyright = "© 2026 Kohinoor Doors. All rights reserved."
+export const footer_quick_links = "Quick Links"
+
+export const floating_whatsapp_tooltip = "Chat with us"
