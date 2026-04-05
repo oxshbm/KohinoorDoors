@@ -8,6 +8,9 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
 
+    /* ✅ FIX: add Node types */
+    "types": ["node"],
+
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
@@ -16,11 +19,15 @@
     "jsx": "react-jsx",
     "strict": true,
     "noEmit": true,
+
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
     }
   },
-  "include": ["src"],
+
+  /* ✅ FIX: include vite config */
+  "include": ["src", "vite.config.ts"],
+
   "references": [{ "path": "./tsconfig.node.json" }]
 }
