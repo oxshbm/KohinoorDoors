@@ -1,3 +1,5 @@
+import { useState } from 'react'
+import { AnimatePresence } from 'framer-motion'
 import { LanguageProvider } from '@/context/LanguageContext'
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
@@ -7,10 +9,18 @@ import Gallery from '@/components/Gallery'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 import FloatingWhatsApp from '@/components/FloatingWhatsApp'
+import DoorOpeningAnimation from '@/components/DoorOpeningAnimation'
 
 function App() {
+  const [showOpeningAnimation, setShowOpeningAnimation] = useState(true)
+
   return (
     <LanguageProvider>
+      <AnimatePresence>
+        {showOpeningAnimation ? (
+          <DoorOpeningAnimation onComplete={() => setShowOpeningAnimation(false)} />
+        ) : null}
+      </AnimatePresence>
       <Navbar />
       <Hero />
       <Products />

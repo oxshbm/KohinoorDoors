@@ -4,7 +4,7 @@ import { useLanguage } from '@/context/LanguageContext'
 export default function Products() {
   const { t } = useLanguage()
 
-  const ProductCard = ({ title, description, features, buttonLabel, messageText }: any) => {
+  const ProductCard = ({ title, description, features, buttonLabel, messageText, imageUrl, imageAlt }: any) => {
     const handleWhatsApp = () => {
       const phone = '919403763025'
       window.open(`https://wa.me/${phone}?text=${encodeURIComponent(messageText)}`, '_blank')
@@ -19,36 +19,38 @@ export default function Products() {
         viewport={{ once: true }}
       >
         <motion.div
-          className="bg-white rounded-xl shadow-lg overflow-hidden h-full flex flex-col hover:shadow-2xl"
+          className="bg-[#fffdf9] border border-brand-gold/20 rounded-3xl shadow-lg overflow-hidden h-full flex flex-col hover:shadow-2xl"
           whileHover={{ y: -10 }}
           transition={{ duration: 0.3 }}
         >
-          {/* Image Placeholder */}
-          <div className="h-48 bg-gradient-to-br from-brand-charcoal to-brand-gold relative overflow-hidden">
-            <motion.div
-              className="absolute inset-0"
-              animate={{ scale: [1, 1.1, 1] }}
-              transition={{ duration: 3, repeat: Infinity }}
+          {/* Vertical Door Image */}
+          <div className="h-[420px] relative overflow-hidden">
+            <img
+              src={imageUrl}
+              alt={imageAlt || title}
+              className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              loading="lazy"
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
           </div>
 
-          {/* Content */}
-          <div className="p-6 flex flex-col flex-grow">
-            <h3 className="text-2xl font-bold text-brand-charcoal mb-2">{title}</h3>
-            <p className="text-gray-600 mb-4 text-sm">{description}</p>
+          {/* Card Info */}
+          <div className="p-7 md:p-8 flex flex-col flex-grow">
+            <h3 className="text-2xl font-bold text-brand-charcoal mb-3">{title}</h3>
+            <p className="text-gray-600 mb-6 text-base leading-relaxed">{description}</p>
 
             {/* Features */}
-            <ul className="space-y-2 mb-6 flex-grow">
+            <ul className="space-y-3 mb-7 flex-grow">
               {features.map((feature: string, idx: number) => (
                 <motion.li
                   key={idx}
-                  className="flex items-center text-sm text-gray-700"
+                  className="flex items-center text-[15px] text-gray-700"
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: idx * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <span className="w-2 h-2 bg-brand-gold rounded-full mr-3"></span>
+                  <span className="w-2.5 h-2.5 bg-brand-gold rounded-full mr-3"></span>
                   {feature}
                 </motion.li>
               ))}
@@ -59,7 +61,7 @@ export default function Products() {
               onClick={handleWhatsApp}
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
-              className="w-full bg-brand-gold text-brand-charcoal font-bold py-3 rounded-lg hover:bg-brand-gold-light transition-all"
+              className="w-full bg-brand-gold text-brand-charcoal font-bold py-3.5 rounded-xl hover:bg-brand-gold-light transition-all"
             >
               {buttonLabel}
             </motion.button>
@@ -70,8 +72,11 @@ export default function Products() {
   }
 
   return (
-    <section id="products" className="py-20 bg-brand-cream">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="products" className="relative py-24 bg-gradient-to-b from-brand-cream to-[#f3ede3] overflow-hidden">
+      <div className="absolute -top-24 -left-20 w-72 h-72 rounded-full bg-brand-gold/10 blur-3xl" />
+      <div className="absolute -bottom-28 -right-24 w-80 h-80 rounded-full bg-brand-charcoal/10 blur-3xl" />
+      <div className="absolute inset-0 opacity-20 bg-[linear-gradient(120deg,rgba(201,168,76,0.16)_1px,transparent_1px)] bg-[size:26px_26px]" />
+      <div className="max-w-7xl mx-auto px-6 md:px-8">
         {/* Heading */}
         <motion.div
           className="text-center mb-16"
@@ -87,7 +92,7 @@ export default function Products() {
         </motion.div>
 
         {/* Product Cards Grid */}
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <ProductCard
             title={t('laminated_title')}
             description={t('laminated_desc')}
@@ -100,6 +105,8 @@ export default function Products() {
             ]}
             buttonLabel={t('laminated_cta')}
             messageText="I want to inquire about Laminated Coating Doors"
+            imageUrl="https://images.pexels.com/photos/18231392/pexels-photo-18231392.jpeg?auto=compress&cs=tinysrgb&w=1200"
+            imageAlt="Laminated coating door"
           />
 
           <ProductCard
@@ -114,6 +121,40 @@ export default function Products() {
             ]}
             buttonLabel={t('frp_cta')}
             messageText="I want to inquire about FRP Doors"
+            imageUrl="https://images.pexels.com/photos/36408670/pexels-photo-36408670.jpeg?auto=compress&cs=tinysrgb&w=1200"
+            imageAlt="FRP style modern door"
+          />
+
+          <ProductCard
+            title={t('coating_title')}
+            description={t('coating_desc')}
+            features={[
+              t('coating_feature_1'),
+              t('coating_feature_2'),
+              t('coating_feature_3'),
+              t('coating_feature_4'),
+              t('coating_feature_5'),
+            ]}
+            buttonLabel={t('coating_cta')}
+            messageText="I want to inquire about Coating Doors"
+            imageUrl="https://images.pexels.com/photos/34171723/pexels-photo-34171723.jpeg?auto=compress&cs=tinysrgb&w=1200"
+            imageAlt="Coating finish wooden door"
+          />
+
+          <ProductCard
+            title={t('laminated_only_title')}
+            description={t('laminated_only_desc')}
+            features={[
+              t('laminated_only_feature_1'),
+              t('laminated_only_feature_2'),
+              t('laminated_only_feature_3'),
+              t('laminated_only_feature_4'),
+              t('laminated_only_feature_5'),
+            ]}
+            buttonLabel={t('laminated_only_cta')}
+            messageText="I want to inquire about Laminated Doors"
+            imageUrl="https://images.pexels.com/photos/12794873/pexels-photo-12794873.jpeg?auto=compress&cs=tinysrgb&w=1200"
+            imageAlt="Laminated interior door"
           />
         </div>
       </div>
