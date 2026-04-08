@@ -14,7 +14,7 @@ export default function FloatingWhatsApp() {
   return (
     <motion.button
       onClick={handleClick}
-      className="fixed bottom-6 right-6 z-40 w-16 h-16 rounded-full bg-green-500 text-white shadow-lg hover:shadow-2xl flex items-center justify-center cursor-pointer"
+      className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-40 w-14 h-14 md:w-16 md:h-16 rounded-full bg-green-500 text-white shadow-lg hover:shadow-2xl flex items-center justify-center cursor-pointer"
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ delay: 1, duration: 0.5 }}
@@ -24,7 +24,7 @@ export default function FloatingWhatsApp() {
     >
       {/* WhatsApp Icon */}
       <svg
-        className="w-8 h-8"
+        className="w-7 h-7 md:w-8 md:h-8"
         fill="currentColor"
         viewBox="0 0 24 24"
       >

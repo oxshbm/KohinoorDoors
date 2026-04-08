@@ -15,7 +15,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 bg-brand-charcoal text-white shadow-lg z-50">
-      <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-4 flex justify-between items-center">
         {/* Logo */}
         <ScrollLink
           to="hero"
@@ -27,7 +27,7 @@ export default function Navbar() {
           <img
             src="/kohinoor-logo.png"
             alt="Kohinoor Doors Logo"
-            className="h-14 object-contain"
+            className="h-10 sm:h-12 md:h-14 object-contain"
           />
         </ScrollLink>
 
@@ -59,7 +59,8 @@ export default function Navbar() {
           {/* Hamburger Menu */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden flex flex-col gap-1"
+            className="md:hidden flex flex-col gap-1 p-1"
+            aria-label="Toggle menu"
           >
             <div className="w-6 h-0.5 bg-white"></div>
             <div className="w-6 h-0.5 bg-white"></div>
@@ -70,7 +71,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-brand-charcoal border-t border-brand-gold px-4 py-4">
+        <div className="md:hidden bg-brand-charcoal border-t border-brand-gold px-4 py-3">
           {navLinks.map((link) => (
             <ScrollLink
               key={link.to}
@@ -79,7 +80,7 @@ export default function Navbar() {
               smooth
               duration={500}
               onClick={() => setIsOpen(false)}
-              className="block py-2 text-white hover:text-brand-gold transition-colors cursor-pointer"
+              className="block py-3 text-white hover:text-brand-gold transition-colors cursor-pointer"
             >
               {link.label}
             </ScrollLink>

@@ -6,17 +6,17 @@ export default function Footer() {
   const { t } = useLanguage()
 
   return (
-    <footer className="relative bg-gradient-to-b from-[#181528] to-[#11101d] text-white py-16 overflow-hidden">
+    <footer className="relative bg-gradient-to-b from-[#181528] to-[#11101d] text-white py-12 md:py-16 overflow-hidden">
       <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_10%_20%,rgba(201,168,76,0.35)_0,transparent_30%),radial-gradient(circle_at_90%_80%,rgba(201,168,76,0.22)_0,transparent_28%)]" />
       <div className="absolute inset-0 opacity-20 bg-[linear-gradient(90deg,rgba(201,168,76,0.14)_1px,transparent_1px)] bg-[size:34px_34px]" />
-      <div className="max-w-7xl mx-auto px-6 md:px-8">
-        <div className="grid md:grid-cols-3 gap-12 mb-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+        <div className="grid md:grid-cols-3 gap-8 md:gap-12 mb-8 md:mb-10">
           {/* Brand Section */}
           <div>
-            <h3 className="text-3xl font-bold text-brand-gold mb-3">
+            <h3 className="text-2xl sm:text-3xl font-bold text-brand-gold mb-3">
               {t('footer_brand')}
             </h3>
-            <p className="text-gray-300 text-lg">{t('footer_tagline')}</p>
+            <p className="text-gray-300 text-base sm:text-lg">{t('footer_tagline')}</p>
           </div>
 
           {/* Quick Links */}

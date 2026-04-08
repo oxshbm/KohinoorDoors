@@ -24,7 +24,7 @@ export default function Products() {
           transition={{ duration: 0.3 }}
         >
           {/* Vertical Door Image */}
-          <div className="h-[420px] relative overflow-hidden">
+          <div className="h-72 sm:h-80 md:h-[420px] relative overflow-hidden">
             <img
               src={imageUrl}
               alt={imageAlt || title}
@@ -35,16 +35,16 @@ export default function Products() {
           </div>
 
           {/* Card Info */}
-          <div className="p-7 md:p-8 flex flex-col flex-grow">
-            <h3 className="text-2xl font-bold text-brand-charcoal mb-3">{title}</h3>
-            <p className="text-gray-600 mb-6 text-base leading-relaxed">{description}</p>
+          <div className="p-5 sm:p-6 md:p-8 flex flex-col flex-grow">
+            <h3 className="text-xl sm:text-2xl font-bold text-brand-charcoal mb-3">{title}</h3>
+            <p className="text-gray-600 mb-5 sm:mb-6 text-sm sm:text-base leading-relaxed">{description}</p>
 
             {/* Features */}
-            <ul className="space-y-3 mb-7 flex-grow">
+            <ul className="space-y-2.5 sm:space-y-3 mb-6 sm:mb-7 flex-grow">
               {features.map((feature: string, idx: number) => (
                 <motion.li
                   key={idx}
-                  className="flex items-center text-[15px] text-gray-700"
+                  className="flex items-center text-sm sm:text-[15px] text-gray-700"
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: idx * 0.1 }}
@@ -72,11 +72,11 @@ export default function Products() {
   }
 
   return (
-    <section id="products" className="relative py-24 bg-gradient-to-b from-brand-cream to-[#f3ede3] overflow-hidden">
-      <div className="absolute -top-24 -left-20 w-72 h-72 rounded-full bg-brand-gold/10 blur-3xl" />
-      <div className="absolute -bottom-28 -right-24 w-80 h-80 rounded-full bg-brand-charcoal/10 blur-3xl" />
+    <section id="products" className="relative py-16 md:py-24 bg-gradient-to-b from-brand-cream to-[#f3ede3] overflow-hidden">
+      <div className="absolute -top-24 -left-20 w-56 h-56 md:w-72 md:h-72 rounded-full bg-brand-gold/10 blur-3xl" />
+      <div className="absolute -bottom-28 -right-24 w-64 h-64 md:w-80 md:h-80 rounded-full bg-brand-charcoal/10 blur-3xl" />
       <div className="absolute inset-0 opacity-20 bg-[linear-gradient(120deg,rgba(201,168,76,0.16)_1px,transparent_1px)] bg-[size:26px_26px]" />
-      <div className="max-w-7xl mx-auto px-6 md:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
         {/* Heading */}
         <motion.div
           className="text-center mb-16"
@@ -85,14 +85,14 @@ export default function Products() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-5xl font-bold text-brand-charcoal mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-brand-charcoal mb-3 md:mb-4">
             {t('products_heading')}
           </h2>
-          <p className="text-gray-700 text-lg">{t('products_subheading')}</p>
+          <p className="text-gray-700 text-base md:text-lg">{t('products_subheading')}</p>
         </motion.div>
 
         {/* Product Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           <ProductCard
             title={t('laminated_title')}
             description={t('laminated_desc')}
