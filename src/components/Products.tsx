@@ -105,7 +105,7 @@ export default function Products() {
             ]}
             buttonLabel={t('laminated_cta')}
             messageText="I want to inquire about Laminated Coating Doors"
-            imageUrl="https://source.unsplash.com/1200x1600/?laminated,coating,door,interior"
+            imageUrl="https://images.pexels.com/photos/18231392/pexels-photo-18231392.jpeg?auto=compress&cs=tinysrgb&w=1200"
             imageAlt="Laminated coating door"
           />
 
@@ -121,7 +121,7 @@ export default function Products() {
             ]}
             buttonLabel={t('frp_cta')}
             messageText="I want to inquire about FRP Doors"
-            imageUrl="https://source.unsplash.com/1200x1600/?pvc,frp,door,modern"
+            imageUrl="/frp.jpg"
             imageAlt="FRP style modern door"
           />
 
@@ -137,7 +137,7 @@ export default function Products() {
             ]}
             buttonLabel={t('coating_cta')}
             messageText="I want to inquire about Coating Doors"
-            imageUrl="https://source.unsplash.com/1200x1600/?coating,door,designer,wooden"
+            imageUrl="/coating.jpg"
             imageAlt="Coating finish wooden door"
           />
 
@@ -153,7 +153,7 @@ export default function Products() {
             ]}
             buttonLabel={t('laminated_only_cta')}
             messageText="I want to inquire about Laminated Doors"
-            imageUrl="https://source.unsplash.com/1200x1600/?laminated,door,stylish,home"
+            imageUrl="/Laminated.jpg"
             imageAlt="Laminated interior door"
           />
         </div>

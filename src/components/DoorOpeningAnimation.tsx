@@ -7,7 +7,7 @@ interface DoorOpeningAnimationProps {
 
 export default function DoorOpeningAnimation({ onComplete }: DoorOpeningAnimationProps) {
   const doorDelay = 0.65
-  const doorDuration = 2.8
+  const doorDuration = 3.2
   const totalAnimationTimeMs = (doorDelay + doorDuration + 0.05) * 1000
 
   useEffect(() => {
@@ -49,6 +49,13 @@ export default function DoorOpeningAnimation({ onComplete }: DoorOpeningAnimatio
         <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_20%_20%,#d8b77b_0%,transparent_35%),linear-gradient(90deg,transparent_0%,rgba(255,255,255,0.08)_50%,transparent_100%)]" />
         <div className="absolute top-8 left-6 right-6 bottom-8 border border-brand-gold/25 rounded-sm" />
         <div className="absolute top-16 left-12 right-12 bottom-16 border border-brand-gold/20 rounded-sm" />
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-32 sm:w-36 md:w-44 opacity-95">
+          <img
+            src="/kohinoor-logo.png"
+            alt="Kohinoor Doors Logo"
+            className="w-full h-auto object-contain drop-shadow-[0_4px_10px_rgba(0,0,0,0.5)]"
+          />
+        </div>
         <div className="absolute top-1/2 right-8 -translate-y-1/2 w-4 h-16 rounded-full bg-gradient-to-b from-brand-gold to-[#8b6a2e] shadow-[0_0_12px_rgba(212,175,55,0.35)]" />
       </motion.div>
 
@@ -61,6 +68,13 @@ export default function DoorOpeningAnimation({ onComplete }: DoorOpeningAnimatio
         <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_80%_20%,#d8b77b_0%,transparent_35%),linear-gradient(90deg,transparent_0%,rgba(255,255,255,0.08)_50%,transparent_100%)]" />
         <div className="absolute top-8 left-6 right-6 bottom-8 border border-brand-gold/25 rounded-sm" />
         <div className="absolute top-16 left-12 right-12 bottom-16 border border-brand-gold/20 rounded-sm" />
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-32 sm:w-36 md:w-44 opacity-95">
+          <img
+            src="/kohinoor-logo.png"
+            alt="Kohinoor Doors Logo"
+            className="w-full h-auto object-contain drop-shadow-[0_4px_10px_rgba(0,0,0,0.5)]"
+          />
+        </div>
         <div className="absolute top-1/2 left-8 -translate-y-1/2 w-4 h-16 rounded-full bg-gradient-to-b from-brand-gold to-[#8b6a2e] shadow-[0_0_12px_rgba(212,175,55,0.35)]" />
       </motion.div>
 

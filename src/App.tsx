@@ -4,7 +4,6 @@ import { LanguageProvider } from '@/context/LanguageContext'
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
 import Products from '@/components/Products'
-import NewAgeDoors from '@/components/NewAgeDoors'
 import Services from '@/components/Services'
 import Gallery from '@/components/Gallery'
 import Contact from '@/components/Contact'
@@ -25,7 +24,6 @@ function App() {
       <Navbar />
       <Hero />
       <Products />
-      <NewAgeDoors />
       <Services />
       <Gallery />
       <Contact />
