@@ -45,6 +45,10 @@ export const laminated_only_feature_3 = "Moisture-resistant surface"
 export const laminated_only_feature_4 = "Modern design options"
 export const laminated_only_feature_5 = "Durable and easy to clean"
 export const laminated_only_cta = "Inquire about Laminated Doors"
+export const pvc_title = "PVC Doors"
+
+export const new_age_heading = "Stylish New-Age Doors"
+export const new_age_subheading = "Explore modern designs for laminated, PVC, coating, and FRP doors"
 
 export const services_heading = "Our Services"
 export const services_subheading = "Beyond products, we deliver experience"
