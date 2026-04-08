@@ -46,6 +46,15 @@ export const laminated_only_feature_4 = "Modern design options"
 export const laminated_only_feature_5 = "Durable and easy to clean"
 export const laminated_only_cta = "Inquire about Laminated Doors"
 
+export const pvc_title = "PVC Doors"
+export const pvc_desc = "Lightweight and durable PVC doors for modern homes"
+export const pvc_feature_1 = "Water and moisture resistant"
+export const pvc_feature_2 = "Termite-proof material"
+export const pvc_feature_3 = "Low maintenance and easy cleaning"
+export const pvc_feature_4 = "Long-lasting color and finish"
+export const pvc_feature_5 = "Budget-friendly modern option"
+export const pvc_cta = "Inquire about PVC Doors"
+
 export const services_heading = "Our Services"
 export const services_subheading = "Beyond products, we deliver experience"
 

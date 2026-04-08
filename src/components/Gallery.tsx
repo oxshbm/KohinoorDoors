@@ -4,7 +4,44 @@ import { useLanguage } from '@/context/LanguageContext'
 export default function Gallery() {
   const { t } = useLanguage()
 
-  const placeholders = Array.from({ length: 6 }, (_, i) => i)
+  const galleryItems = [
+    {
+      title: 'Modern Door Design',
+      image: 'https://images.pexels.com/photos/18231392/pexels-photo-18231392.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    },
+    {
+      title: 'Premium Wooden Door',
+      image: '/Laminated.jpg',
+    },
+    {
+      title: 'Door Installation Site',
+      image: 'https://images.pexels.com/photos/1109541/pexels-photo-1109541.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    },
+    {
+      title: 'Factory Floor',
+      image: 'https://images.pexels.com/photos/4483610/pexels-photo-4483610.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    },
+    {
+      title: 'Construction Project',
+      image: 'https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    },
+    {
+      title: 'Door PNG Render',
+      image: 'https://pngimg.com/d/door_PNG17595.png',
+    },
+    {
+      title: 'Stylish Entry Door',
+      image: '/coating.jpg',
+    },
+    {
+      title: 'Door PNG Preview',
+      image: 'https://pngimg.com/d/door_PNG17617.png',
+    },
+    {
+      title: 'On-site Installation Team',
+      image: '/frp.jpg',
+    },
+  ]
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -46,22 +83,28 @@ export default function Gallery() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {placeholders.map((idx) => (
+          {galleryItems.map((item) => (
             <motion.div
-              key={idx}
+              key={item.title}
               variants={itemVariants}
               whileHover={{ y: -8 }}
               className="cursor-pointer"
             >
-              <div className="relative h-60 sm:h-64 md:h-72 bg-gradient-to-br from-brand-charcoal via-[#3a314f] to-brand-gold rounded-2xl overflow-hidden shadow-lg border border-brand-gold/20">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.2),transparent_45%)]" />
-                <motion.div
-                  className="absolute inset-0 flex items-center justify-center px-6 text-center text-white text-base sm:text-lg font-semibold"
-                  animate={{ opacity: [0.55, 0.8, 0.55] }}
-                  transition={{ duration: 3, repeat: Infinity }}
-                >
-                  {t('gallery_coming')}
-                </motion.div>
+              <div className="relative h-60 sm:h-64 md:h-72 rounded-2xl overflow-hidden shadow-lg border border-brand-gold/20 bg-white">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className={`w-full h-full ${item.image.endsWith('.png') ? 'object-contain p-4 bg-white' : 'object-cover'}`}
+                  loading="lazy"
+                  onError={(e) => {
+                    e.currentTarget.src = '/Laminated.jpg'
+                    e.currentTarget.className = 'w-full h-full object-cover'
+                  }}
+                />
+                {!item.image.endsWith('.png') && <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/25 to-transparent" />}
+                <p className={`absolute bottom-3 left-3 right-3 text-sm sm:text-base font-semibold leading-tight ${item.image.endsWith('.png') ? 'text-brand-charcoal' : 'text-white'}`}>
+                  {item.title}
+                </p>
               </div>
             </motion.div>
           ))}

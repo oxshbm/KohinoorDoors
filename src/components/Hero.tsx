@@ -104,6 +104,20 @@ export default function Hero() {
           {t('hero_subtitle')}
         </motion.p>
 
+        <motion.div
+          variants={itemVariants}
+          className="grid grid-cols-2 gap-3 sm:gap-6 max-w-lg mx-auto mb-8 md:mb-10"
+        >
+          <div className="bg-white/10 border border-brand-gold/30 rounded-xl px-3 sm:px-5 py-3 sm:py-4">
+            <p className="text-brand-gold text-xl sm:text-2xl md:text-3xl font-extrabold">100,000+</p>
+            <p className="text-xs sm:text-sm text-gray-200 mt-1">Doors Delivered</p>
+          </div>
+          <div className="bg-white/10 border border-brand-gold/30 rounded-xl px-3 sm:px-5 py-3 sm:py-4">
+            <p className="text-brand-gold text-xl sm:text-2xl md:text-3xl font-extrabold">10,000+</p>
+            <p className="text-xs sm:text-sm text-gray-200 mt-1">Customers Reached</p>
+          </div>
+        </motion.div>
+
         <motion.button
           variants={itemVariants}
           onClick={handleWhatsApp}

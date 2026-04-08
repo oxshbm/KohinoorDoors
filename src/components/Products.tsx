@@ -30,6 +30,9 @@ export default function Products() {
               alt={imageAlt || title}
               className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
               loading="lazy"
+              onError={(e) => {
+                e.currentTarget.src = '/Laminated.jpg'
+              }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
           </div>
@@ -94,22 +97,6 @@ export default function Products() {
         {/* Product Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           <ProductCard
-            title={t('laminated_title')}
-            description={t('laminated_desc')}
-            features={[
-              t('laminated_feature_1'),
-              t('laminated_feature_2'),
-              t('laminated_feature_3'),
-              t('laminated_feature_4'),
-              t('laminated_feature_5'),
-            ]}
-            buttonLabel={t('laminated_cta')}
-            messageText="I want to inquire about Laminated Coating Doors"
-            imageUrl="https://images.pexels.com/photos/18231392/pexels-photo-18231392.jpeg?auto=compress&cs=tinysrgb&w=1200"
-            imageAlt="Laminated coating door"
-          />
-
-          <ProductCard
             title={t('frp_title')}
             description={t('frp_desc')}
             features={[
@@ -155,6 +142,22 @@ export default function Products() {
             messageText="I want to inquire about Laminated Doors"
             imageUrl="/Laminated.jpg"
             imageAlt="Laminated interior door"
+          />
+
+          <ProductCard
+            title={t('pvc_title')}
+            description={t('pvc_desc')}
+            features={[
+              t('pvc_feature_1'),
+              t('pvc_feature_2'),
+              t('pvc_feature_3'),
+              t('pvc_feature_4'),
+              t('pvc_feature_5'),
+            ]}
+            buttonLabel={t('pvc_cta')}
+            messageText="I want to inquire about PVC Doors"
+            imageUrl="https://images.pexels.com/photos/8134816/pexels-photo-8134816.jpeg?auto=compress&cs=tinysrgb&w=1200"
+            imageAlt="PVC door"
           />
         </div>
       </div>
